@@ -1,6 +1,16 @@
-# Some Important Commands for React :
+# Types of Testing in React
 
-code issues fixed :
+(Time for the Test)
+
+1. Unit Testing :
+   To test the react component in Isolation.
+
+2. Integration Testing :
+   Multiple component interact with each other
+
+3. End to End Testing :
+
+# Some Important Commands for React :
 
 ```
  https://github.com/namastedev/namaste-react/commit/d3f0d801df96fb40a7d03cb411c72a469bbaef51#diff-7a92b40a85bd4f1ecab332c8f6060c5cbc3f358de43ec959cb6e9dbe6e1d8325
@@ -425,4 +435,28 @@ Swiggy menu Api
 ```
 
 https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.952083&lng=77.7079919&restaurantId=290187&catalog_qa=undefined&submitAction=ENTER
+```
+
+# Redux Toolkit
+
+- install @reduxjs/toolkit react-redux
+
+1. ```
+   npm install @reduxjs/toolkit
+   ```
+
+```
+If you need React bindings:
+
+```
+
+npm install react-redux
+
+```
+
+- Build our store
+- Connect our store to our app
+- Create slice (cartSlice)
+- Dispatch an Action
+- Read the data from Selector
 ```

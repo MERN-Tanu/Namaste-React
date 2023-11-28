@@ -10,7 +10,10 @@ import ResturantMenu from "./components/ResturantMenu";
 // import UserClass from "./components/UserClass";
 import UserContext from "./utils/UserContext";
 // import Grocery from "./src/components/Grocery";
-
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import { UseSelector } from "react-redux/es/hooks/useSelector";
+import Cart from "./components/Cart";
 /***
  *   Header (Nav bar)
  * -> Logo
@@ -59,16 +62,18 @@ const AppLayout = () => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ loggedInUser: UserName, setuserInfo }}>
-      <div className="app">
-        {/* <UserContext.Provider value={{ loggedInUser: "Elon Musk" }}>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: UserName, setuserInfo }}>
+        <div className="app">
+          {/* <UserContext.Provider value={{ loggedInUser: "Elon Musk" }}>
           <Header />
         </UserContext.Provider> */}
-        <Header />
-        <Outlet />
-        {/* <Body /> */}
-      </div>
-    </UserContext.Provider>
+          <Header />
+          <Outlet />
+          {/* <Body /> */}
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -106,6 +111,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/resturant/:resId",
         element: <ResturantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,

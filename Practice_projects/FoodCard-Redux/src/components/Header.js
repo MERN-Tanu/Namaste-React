@@ -3,6 +3,7 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 // import Grocery from "./Grocery";
 const Header = () => {
   const [btnNameReact, setbtnNameReact] = useState("Login");
@@ -11,6 +12,10 @@ const Header = () => {
 
   const { loggedInUser } = useContext(UserContext);
   console.log("loggedInUser", loggedInUser);
+
+  // Subscribing to the store using a Selector
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log("items", cartItems);
   // if no dependency array => useEffect is called on every render
   //  if depenedency array is empty = [] => useEffect is called on initial render (just once)
   //  if dependency array is [btnNameReact] => called everytime [btnNameReact] is updated
@@ -42,8 +47,8 @@ const Header = () => {
             <Link to="/about"> About Us</Link>
           </li>
 
-          <li className="px-4">
-            <Link to="cart"> Cart</Link>
+          <li className="px-2 mt-[-2px] font-bold text-xl">
+            <Link to="/cart">Cart - ({cartItems.length}items)</Link>
           </li>
 
           <li className="px-4 font-bold">

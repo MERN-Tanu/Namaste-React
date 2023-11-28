@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
+// import cartSlice from "../utils/cartSlice";
 
 const RestuarnatCategory = (props, dummy) => {
   const [showItems, setshowItems] = useState(false);
@@ -18,11 +19,13 @@ const RestuarnatCategory = (props, dummy) => {
           className="flex justify-between cursor-pointer"
           onClick={handleClick}>
           <span className="font-bold text-lg">
-            {itemCards.title} ({itemCards.itemCards.length})
+            {itemCards.title} ({itemCards.length})
           </span>
           <span>⬇️</span>
         </div>
-        {showItems && <ItemList items={itemCards} dummy={dummy} />}
+        {showItems && (
+          <ItemList items={itemCards?.["itemCards"]} dummy={dummy} />
+        )}
       </div>
     </div>
   );
