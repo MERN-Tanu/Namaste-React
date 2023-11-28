@@ -10,6 +10,13 @@
 
 3. End to End Testing :
 
+   Testing a react application as soon as user land on the website to the user leave the website.
+   GUI testing, integration testing, database testing, performance testing, security testing, and usability testing.
+   It required different testing Like : Selenium,Cypress, and Appium are commonly used for E2E testing to improve efficiency and accuracy.
+   There are two types of E2E testing:
+   Horizontal: The most commonly used approach. It tests across multiple applications.
+   Vertical: Another way to perform E2E testing.
+
 # Some Important Commands for React :
 
 ```
