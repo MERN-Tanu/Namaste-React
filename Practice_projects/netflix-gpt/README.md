@@ -31,6 +31,7 @@ npx create-react-app netflix-gpt
 ----------------------------------------------------------------------**Features Implemented**-------------------------------------------
 
 
+```js
 Create React App
 Configured TailwindCSS
 Header
@@ -92,7 +93,7 @@ MovieLists * N
 NetflixGPT
 Search Bar
 Movie Suggestions
-
+```
 
 
 
