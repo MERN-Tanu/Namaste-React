@@ -1,3 +1,10 @@
+# How to pass data from child to parent?
+1. Lifting-up state : we will initailise the same data to the parent component, so it will easy for us to pass data from child to parent.
+2. Callback Function : 
+
+
+
+
 # Some Important Commands for React :
 
 Q: What is NPM?
