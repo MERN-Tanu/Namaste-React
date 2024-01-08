@@ -18,7 +18,7 @@ const ResturantCard = (props) => {
 
   console.log("logged", loggedInUser);
   return (
-    <div className="m-4 p-4 w-[280px] min-h-[300px] rounded-lg bg-gray-200 hover:bg-green-200">
+    <div className="m-4 p-4 w-[280px] min-h-[300px] rounded-lg bg-gray-100 hover:bg-gradient-to-r from-slate-300 via-zinc-300 to-slate-500  transition ease-in-out delay-95 ">
       <img className="rounded-lg" src={CDN_URL + cloudinaryImageId}></img>
 
       {/* <h3>{resData?.data?.name}</h3>
@@ -28,13 +28,14 @@ const ResturantCard = (props) => {
         <h4>{resData?.data?.deliveryTime}</h4>
         <h4>{resData?.data?.costForTwo}</h4> */}
 
-      <h3 className="font-bold py-4 text-lg">{name}</h3>
-      <h4>{cuisines?.join(",")}</h4>
+      <span className="font-bold py-4 text-lg overflow-x-hidden">{name}</span>
       <h4>⭐{avgRating} stars</h4>
+      <h4>⌚{sla?.deliveryTime} minutes</h4>
+      {/* <h4>User: {loggedInUser}</h4> */}
+      {/* <h4>{cuisines?.join(",")}</h4> */}
+
       {/* <h4>{costForTwo} </h4> */}
       {/* Optional chaining */}
-      <h4>⌚{sla?.deliveryTime} minutes</h4>
-      <h4>User: {loggedInUser}</h4>
     </div>
   );
 };
@@ -45,13 +46,16 @@ const ResturantCard = (props) => {
 export const withPromotedLabel = (ResturantCard) => {
   return (props) => {
     return (
-      <div>
-        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">
+      <div className="hover:scale-95 transition ease-in-out delay-75">
+        <label className="absolute bg-black text-white m-2 p-2 rounded-lg z-500">
           Promoted
         </label>
-        <ResturantCard {...props} />
+        <div className="">
+          <ResturantCard {...props} />
+        </div>
       </div>
     );
   };
 };
+
 export default ResturantCard;

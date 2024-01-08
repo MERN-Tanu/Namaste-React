@@ -11,7 +11,7 @@ const ResturantCard = (props) => {
   //   console.log("prop", props);
   const { resData } = props;
   // console.log("resdata", resData);
-  const { name, avgRating, cuisines, costForTwo, sla, cloudinaryImageId } =
+  const { name, avgRating, areaName, costForTwo, sla, cloudinaryImageId } =
     resData;
 
   const { loggedInUser } = useContext(UserContext);
@@ -29,12 +29,12 @@ const ResturantCard = (props) => {
         <h4>{resData?.data?.costForTwo}</h4> */}
 
       <h3 className="font-bold py-4 text-lg">{name}</h3>
-      <h4>{cuisines?.join(",")}</h4>
+      <h4>🌎{areaName}</h4>
       <h4>⭐{avgRating} stars</h4>
       {/* <h4>{costForTwo} </h4> */}
       {/* Optional chaining */}
       <h4>⌚{sla?.deliveryTime} minutes</h4>
-      <h4>User: {loggedInUser}</h4>
+      <h4>👤 {loggedInUser}</h4>
     </div>
   );
 };

@@ -138,7 +138,7 @@ const Body = () => {
               // res = ele, ele will iterarte listOfResturanat
               let fileredListRest = listOfRestuarant.filter((res) => {
                 // console.log("res", res);
-                return res.info.avgRating > 4.5;
+                return res.info.avgRating > 4.2;
               });
               // console.log("filterlist", filterList);
               setfileredListRest(fileredListRest);

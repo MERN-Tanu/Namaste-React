@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
-
+import { FaMicrophone } from "react-icons/fa";
 import { YOUTUBE_VIDEOS_API } from "../utils/constant";
 const Header = () => {
   const [searchQuery, setsearchQuery] = useState("");
@@ -55,6 +55,12 @@ const Header = () => {
         <button className="border border-gray-400 rounded-r-xl px-5 py-2">
           🔍
         </button>
+        <div>
+          <FaMicrophone
+            size={25}
+            className="ml-auto mx-80 bg-gray-200 cursor-pointer rounded-full -mt-9"
+          />
+        </div>
       </div>
 
       <div className="col-span-1">

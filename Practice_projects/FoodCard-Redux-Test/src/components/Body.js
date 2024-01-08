@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 // import { resList } from "../utils/data";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
+
 import UserContext from "../utils/UserContext";
 import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
@@ -98,13 +99,12 @@ const Body = () => {
   return listOfRestuarant.length === 0 ? (
     <ShimmerUI />
   ) : (
-    <div className="body">
+    <div className="body bg-gradient-to-r from-rose-100 via-fuchsia-100 to-indigo-100">
       <div className="filter flex">
         <div className="search m-4 p-4 rounded-lg">
           <input
             type="text"
-            className="border border-solid border-black"
-            placeholder="Search"
+            className="border border-solid border-blue-400 rounded-2xl w-30 h-3 p-4"
             value={searchText}
             onChange={(e) => {
               setsearchText(e.target.value);
@@ -112,7 +112,7 @@ const Body = () => {
             }}
           />
           <button
-            className="px-3 py-1 bg-green-100 m-2 rounded-lg"
+            className="px-3 py-1 m-2 rounded-lg bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 text-white"
             onClick={() => {
               // filter the restuant card and update the ui
               // searchText
@@ -132,7 +132,7 @@ const Body = () => {
         </div>
         <div className="search m-4 p-4 flex items-center">
           <button
-            className="px-4 py-3 bg-blue-100  rounded-lg"
+            className="px-4 text-white py-1 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500  rounded-lg hover:max-lg h-8"
             onClick={() => {
               // filter logic here
               // res = ele, ele will iterarte listOfResturanat
@@ -146,9 +146,9 @@ const Body = () => {
             Top Rated Restaurant
           </button>
         </div>
-        <label className=" p-10">UserName:</label>
+        <label className=" p-10 text-amber-950">UserName:</label>
         <input
-          className="w-30 h-3 p-4 ml-[-27px] mt-[35px] border border-black"
+          className="w-30 h-3 p-4 ml-[-27px] mt-[35px] border border-blue-600 rounded-full bg-blue-100"
           value={loggedInUser}
           onChange={(e) => {
             setuserInfo(e.target.value);
@@ -176,7 +176,9 @@ const Body = () => {
               {resturantElement.info?.veg ? (
                 <ResturantCardPromoted resData={resturantElement.info} />
               ) : (
-                <ResturantCard resData={resturantElement.info} />
+                <div className="hover:scale-95 transition ease-in-out delay-75">
+                  <ResturantCard resData={resturantElement.info} />
+                </div>
               )}
               {/* <ResturantCard
                 

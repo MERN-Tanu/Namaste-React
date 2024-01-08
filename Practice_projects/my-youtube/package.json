@@ -42,5 +42,16 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.5"
-  }
+  },
+  "description": "YouTube Project Clone",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mern/Tanu.git"
+  },
+  "keywords": [
+    "YouTube"
+  ],
+  "author": "Tanu",
+  "license": "ISC"
 }

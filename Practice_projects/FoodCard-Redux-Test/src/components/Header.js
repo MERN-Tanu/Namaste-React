@@ -24,7 +24,7 @@ const Header = () => {
   }, [btnNameReact]);
 
   return (
-    <div className="flex justify-between bg-pink-100 shadow-lg h-[100px] ">
+    <div className="flex justify-between bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600  text-white shadow-lg h-[100px] text-lg font-bold ">
       <div className="logo-container">
         <img className="h-[100%]" src={LOGO_URL} />
       </div>
@@ -32,23 +32,23 @@ const Header = () => {
       <div className="flex- items-center">
         <ul className="flex p-9 m-4">
           <li className="px-4">onlineStatus: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li className="px-4">
+          <li className="px-4 hover:underline">
             <Link to="/">Home</Link>
           </li>
 
-          <li className="px-4">
+          <li className="px-4 font-bold hover:underline">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="px-4">
+          <li className="px-4 hover:underline">
             {" "}
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="px-4">
+          <li className="px-4 font-bold hover:underline">
             <Link to="/about"> About Us</Link>
           </li>
 
           <li className="px-2 mt-[-2px] font-bold text-xl">
-            <Link to="/cart">Cart - ({cartItems.length}items)</Link>
+            <Link to="/cart">🛒({cartItems.length})</Link>
           </li>
 
           <li className="px-4 font-bold">
@@ -56,7 +56,7 @@ const Header = () => {
           </li>
           <div>
             <button
-              className="login px-4 bg-purple-400"
+              className="login px-4 text-white rounded-md font-bold hover:underline"
               onClick={() => {
                 btnNameReact === "Login"
                   ? setbtnNameReact("Logout")

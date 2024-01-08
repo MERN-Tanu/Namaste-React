@@ -30,6 +30,10 @@
   ```
 - Install jsdom library
 
+```
+npm install --save-dev jest-environment-jsdom
+```
+
 # Testing file name
 
 ```
@@ -475,9 +479,9 @@ https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&la
 
 - install @reduxjs/toolkit react-redux
 
-1.  ```
-    npm install @reduxjs/toolkit
-    ```
+1. ```
+   npm install @reduxjs/toolkit
+   ```
 
 ```
 If you need React bindings:

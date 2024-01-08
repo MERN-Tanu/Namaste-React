@@ -14,6 +14,8 @@ import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import { UseSelector } from "react-redux/es/hooks/useSelector";
 import Cart from "./components/Cart";
+// import Footer from "./components/Footer";
+import Footer from "./components/footer";
 /***
  *   Header (Nav bar)
  * -> Logo
@@ -70,6 +72,7 @@ const AppLayout = () => {
         </UserContext.Provider> */}
           <Header />
           <Outlet />
+          <Footer />
           {/* <Body /> */}
         </div>
       </UserContext.Provider>
