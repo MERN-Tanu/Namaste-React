@@ -7,7 +7,7 @@ const RestuarnatCategory = (props, dummy) => {
 
   const { itemCards } = props;
   const handleClick = () => {
-    console.log("clicked");
+    // console.log("clicked");
     setshowItems(!showItems);
   };
   //   console.log("itemCard", itemCards);

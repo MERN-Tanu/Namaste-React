@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #000000;
+  display: flex;
+  padding-top: 8px;
+  margin-left: 160px;
+  margin-right: 160px;
+  height: 30px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  justify-content: space-around;
+}
+
+.subhead {
+  color: #fff;
+}
+
+.submitreq {
+}
+.middleHeading {
+  background-color: #4c5fd5;
+  height: 250px;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+
+.contentHeading {
+  text-shadow: 8px;
+  text-align: center;
+  color: #000000;
+  padding: 40px;
+}
+
+.inputBox {
+  margin-left: 23rem;
+  cursor: pointer;
+  height: 30px;
+  width: 190px;
+}
+
+.searchbar {
+  height: 10px;
+  width: 20px;
+}

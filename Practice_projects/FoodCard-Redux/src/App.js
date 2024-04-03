@@ -78,6 +78,7 @@ const AppLayout = () => {
 };
 
 // list (createBrowserRouter)=[]
+// These are the child of outlet :
 const appRouter = createBrowserRouter([
   {
     path: "/",

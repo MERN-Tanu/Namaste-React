@@ -1,3 +1,33 @@
+** Data Providing to the components using Redux **
+
+```<Provider store = {appStore}>
+   **Here, i am Providing the data to the components using Redux, this is the syntax **
+   <div className = "app">
+   <Header/>
+   <Outlet/>
+   <Footer/>
+
+  </Provider>
+</div>
+```
+
+** Data Providing to the components using useContext**
+
+```
+<UserContext.Provider value = {{loggedInUser: username, setUserInfo}}>
+
+<Header/>
+<Outlet/>
+
+// Using Routing we will create nesting of Routes
+
+<Footer/>
+
+</UserContext.Provider>
+```
+
+![1704810619088](image/Readme/1704810619088.png)
+
 # Types of testing in React
 
 1. Unit Testing :
